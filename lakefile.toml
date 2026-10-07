@@ -1,0 +1,51 @@
+name = "lean4"
+version = "0.1.0"
+keywords = ["math"]
+defaultTargets = ["src"]
+
+[leanOptions]
+pp.unicode.fun = true                     # pretty-prints `fun a ↦ b`
+relaxedAutoImplicit = false
+weak.linter.mathlibStandardSet = true
+maxSynthPendingDepth = 3
+weak.linter.style.emptyLine = false
+weak.linter.style.cdot = false
+weak.linter.style.longLine = false
+weak.linter.style.setOption = false
+weak.linter.flexible = false
+weak.linter.unusedTactic = false
+weak.linter.unusedSectionVars = false
+weak.linter.unusedDecidableInType = false
+weak.linter.style.openClassical = false
+weak.linter.unusedVariables = false
+weak.linter.style.docString = false
+
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+rev = "v4.32.2"
+
+[[lean_lib]]
+name = "src"
+srcDir = "src"
+roots = [
+    "AnalyticContinuation",
+    "CovariantFields",
+    "Givens",
+    "src",
+    "Lightcone",
+    "MatrixAnalysis",
+    "MatrixExpS",
+    "Minkowski",
+    "OsterwalderSchrader",
+    "PolarDecomposition",
+    "PolarPlan",
+    "RealGivens",
+    "SCVAnalysis",
+    "SL2CManifold",
+    "Semigroup",
+    "Spinor",
+    "VectorBHW",
+    "Wightman",
+    "WightmanFramework",
+]
