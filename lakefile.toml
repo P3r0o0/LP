@@ -1,0 +1,40 @@
+name = "lean4"
+version = "0.1.0"
+keywords = ["math"]
+defaultTargets = ["src"]
+
+[leanOptions]
+pp.unicode.fun = true                 # pretty-prints `fun a ↦ b`
+relaxedAutoImplicit = false
+weak.linter.mathlibStandardSet = true
+maxSynthPendingDepth = 3
+
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+rev = "v4.32.2"
+
+[[lean_lib]]
+name = "src"
+srcDir = "src"
+roots = [
+    "AnalyticContinuation",
+    "CovariantFields",
+    "DistributionEOW",
+    "Givens",
+    "LWEBasic",
+    "Lightcone",
+    "MatrixAnalysis",
+    "MatrixExpS",
+    "Minkowski",
+    "PolarDecomposition",
+    "PolarPlan",
+    "RealGivens",
+    "SCVAnalysis",
+    "SL2CManifold",
+    "Spinor",
+    "VectorBHW",
+    "WightmanFramework",
+    "OSReconstruction",
+    "VacuumTheory",
+]

@@ -1,0 +1,13 @@
+[package]
+name = "lwe-rust"
+version = "0.1.0"
+edition = "2021"
+
+[features]
+default = ["std"]
+std = ["rand/std", "rand/std_rng", "sha3/std"]
+
+[dependencies]
+rand = { version = "0.8", default-features = false, features = ["alloc"] }
+sha3 = { version = "0.10", default-features = false }
+
